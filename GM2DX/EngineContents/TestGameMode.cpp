@@ -48,4 +48,6 @@ void ATestGameMode::Tick(float _DeltaTime)
 
 	}
 
+	TestActor->AddActorRotation({ 0.0f, 0.0f, 100.0f * _DeltaTime });
+
 }
