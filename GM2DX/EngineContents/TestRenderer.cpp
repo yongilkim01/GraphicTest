@@ -3,12 +3,12 @@
 
 TestRenderer::TestRenderer()
 {
-	for (int i = 0; i < 8; i++)
-	{
-		CreateRenderUnit();
-		SetMesh("Triangle" + std::to_string(i + 1), i);
-		SetMaterial("MyMaterial", i);
-	}
+	CreateRenderUnit();
+	SetMesh("Diamond");
+	SetMaterial("MyMaterial");
+
+	MyColor.Albedo = float4(1.0f, 1.0f, 1.0f, 1.0f);
+	GetRenderUnit().ConstantBufferLinkData("FMyColor", MyColor);
 }
 
 TestRenderer::~TestRenderer()

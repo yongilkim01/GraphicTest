@@ -174,231 +174,49 @@ void UEngineGraphicDevice::MeshInit()
 		// FullRect 포스트프로세싱용 화면 전체크기 만한 매쉬를 제작.
 		UMesh::Create("FullRect", "FullRect", "Rect");
 	}
-
-	// Triangle 1 (빨간색)
-{
-    std::vector<FEngineVertex> Vertexs;
-    Vertexs.resize(3);
-
-    // 삼각형 1의 각 꼭짓점에 빨간색 적용
-    Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), {0.5f, 1.0f}, {1.0f, 1.0f, 0.0f, 1.0f} }; // 빨간색
-    Vertexs[1] = FEngineVertex{ FVector(0.0f, -1.0f, 0.0f), {0.5f, 0.5f}, {1.0f, 1.0f, 0.0f, 1.0f} }; // 빨간색
-    Vertexs[2] = FEngineVertex{ FVector(0.5f, 0.0f, 0.0f), {1.0f, 0.5f}, {1.0f, 1.0f, 0.0f, 1.0f} }; // 빨간색
-
-    UEngineVertexBuffer::Create("Triangle1", Vertexs);
-
-    std::vector<uint32_t> Indices;
-    Indices.push_back(0); // 상단 꼭짓점
-    Indices.push_back(1); // 중심선 앞쪽
-    Indices.push_back(2); // 중심선 오른쪽
-
-    UEngineIndexBuffer::Create("Triangle1", Indices);
-    UMesh::Create("Triangle1");
-}
-
-// Triangle 2 (핑크색)
-{
-    std::vector<FEngineVertex> Vertexs;
-    Vertexs.resize(3);
-
-    // 삼각형 2의 각 꼭짓점에 핑크색 적용
-    Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), {0.5f, 1.0f}, {1.0f, 0.0f, 0.0f, 1.0f} }; // 핑크색
-    Vertexs[1] = FEngineVertex{ FVector(0.5f, 0.0f, 0.0f), {1.0f, 0.5f}, {1.0f, 0.0f, 0.0f, 1.0f} }; // 핑크색
-    Vertexs[2] = FEngineVertex{ FVector(0.0f, 1.0f, 0.0f), {0.5f, 0.5f}, {1.0f, 0.0f, 0.0f, 1.0f} }; // 핑크색
-
-    UEngineVertexBuffer::Create("Triangle2", Vertexs);
-
-    std::vector<uint32_t> Indices;
-    Indices.push_back(0); // 상단 꼭짓점
-    Indices.push_back(2); // 중심선 앞쪽
-    Indices.push_back(1); // 중심선 오른쪽
-
-    UEngineIndexBuffer::Create("Triangle2", Indices);
-    UMesh::Create("Triangle2");
-}
-
-// Triangle 3 (녹색)
-{
-    std::vector<FEngineVertex> Vertexs;
-    Vertexs.resize(3);
-
-    // 삼각형 3의 각 꼭짓점에 녹색 적용
-    Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), {0.5f, 1.0f}, {1.0f, 0.0f, 1.0f, 1.0f} }; // 녹색
-    Vertexs[1] = FEngineVertex{ FVector(0.0f, 1.0f, 0.0f), {0.5f, 0.5f}, {1.0f, 0.0f, 1.0f, 1.0f} }; // 녹색
-    Vertexs[2] = FEngineVertex{ FVector(-0.5f, 0.0f, 0.0f), {0.0f, 0.5f}, {1.0f, 0.0f, 1.0f, 1.0f} }; // 녹색
-
-    UEngineVertexBuffer::Create("Triangle3", Vertexs);
-
-    std::vector<uint32_t> Indices;
-    Indices.push_back(0); // 상단 꼭짓점
-    Indices.push_back(1); // 중심선 앞쪽
-    Indices.push_back(2); // 중심선 오른쪽
-
-    UEngineIndexBuffer::Create("Triangle3", Indices);
-    UMesh::Create("Triangle3");
-}
-
-// Triangle 4 (노란색)
-{
-    std::vector<FEngineVertex> Vertexs;
-    Vertexs.resize(3);
-
-    // 삼각형 4의 각 꼭짓점에 노란색 적용
-    Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), {0.5f, 1.0f}, {0.0f, 1.0f, 0.0f, 1.0f} }; // 노란색
-    Vertexs[1] = FEngineVertex{ FVector(-0.5f, 0.0f, 0.0f), {0.0f, 0.5f}, {0.0f, 1.0f, 0.0f, 1.0f} }; // 노란색
-    Vertexs[2] = FEngineVertex{ FVector(0.0f, -1.0f, 0.0f), {0.5f, 0.5f}, {0.0f, 1.0f, 0.0f, 1.0f} }; // 노란색
-
-    UEngineVertexBuffer::Create("Triangle4", Vertexs);
-
-    std::vector<uint32_t> Indices;
-    Indices.push_back(0); // 상단 꼭짓점
-    Indices.push_back(1); // 중심선 앞쪽
-    Indices.push_back(2); // 중심선 오른쪽
-
-    UEngineIndexBuffer::Create("Triangle4", Indices);
-    UMesh::Create("Triangle4");
-}
-
-// Triangle 5 (빨간색)
-{
-    std::vector<FEngineVertex> Vertexs;
-    Vertexs.resize(3);
-
-    // 삼각형 5의 각 꼭짓점에 빨간색 적용
-    Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), {0.5f, 1.0f}, {0.0f, 1.0f, 0.0f, 1.0f} }; // 빨간색
-    Vertexs[1] = FEngineVertex{ FVector(0.0f, -1.0f, 0.0f), {0.5f, 0.5f}, {0.0f, 1.0f, 0.0f, 1.0f} }; // 빨간색
-    Vertexs[2] = FEngineVertex{ FVector(0.5f, 0.0f, 0.0f), {1.0f, 0.5f}, {0.0f, 1.0f, 0.0f, 1.0f} }; // 빨간색
-
-    UEngineVertexBuffer::Create("Triangle5", Vertexs);
-
-    std::vector<uint32_t> Indices;
-    Indices.push_back(0); // 하단 꼭짓점
-    Indices.push_back(1); // 중심선 앞쪽
-    Indices.push_back(2); // 중심선 오른쪽
-
-    UEngineIndexBuffer::Create("Triangle5", Indices);
-    UMesh::Create("Triangle5");
-}
-
-// Triangle 6 (핑크색)
-{
-    std::vector<FEngineVertex> Vertexs;
-    Vertexs.resize(3);
-
-    // 삼각형 6의 각 꼭짓점에 핑크색 적용
-    Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), {0.5f, 1.0f}, {1.0f, 0.0f, 1.0f, 1.0f} }; // 핑크색
-    Vertexs[1] = FEngineVertex{ FVector(0.5f, 0.0f, 0.0f), {1.0f, 0.5f}, {1.0f, 0.0f, 1.0f, 1.0f} }; // 핑크색
-    Vertexs[2] = FEngineVertex{ FVector(0.0f, 1.0f, 0.0f), {0.5f, 0.5f}, {1.0f, 0.0f, 1.0f, 1.0f} }; // 핑크색
-
-    UEngineVertexBuffer::Create("Triangle6", Vertexs);
-
-    std::vector<uint32_t> Indices;
-    Indices.push_back(0); // 하단 꼭짓점
-    Indices.push_back(2); // 중심선 앞쪽
-    Indices.push_back(1); // 중심선 오른쪽
-
-    UEngineIndexBuffer::Create("Triangle6", Indices);
-    UMesh::Create("Triangle6");
-}
-
-// Triangle 7 (녹색)
-{
-    std::vector<FEngineVertex> Vertexs;
-    Vertexs.resize(3);
-
-    // 삼각형 7의 각 꼭짓점에 녹색 적용
-    Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), {0.5f, 1.0f}, {1.0f, 0.0f, 0.0f, 1.0f} }; // 녹색
-    Vertexs[1] = FEngineVertex{ FVector(0.0f, 1.0f, 0.0f), {0.5f, 0.5f}, {1.0f, 0.0f, 0.0f, 1.0f} }; // 녹색
-    Vertexs[2] = FEngineVertex{ FVector(-0.5f, 0.0f, 0.0f), {0.0f, 0.5f}, {1.0f, 0.0f, 0.0f, 1.0f} }; // 녹색
-
-    UEngineVertexBuffer::Create("Triangle7", Vertexs);
-
-    std::vector<uint32_t> Indices;
-    Indices.push_back(0); // 하단 꼭짓점
-    Indices.push_back(1); // 중심선 앞쪽
-    Indices.push_back(2); // 중심선 오른쪽
-
-    UEngineIndexBuffer::Create("Triangle7", Indices);
-    UMesh::Create("Triangle7");
-}
-
-// Triangle 8 (노란색)
-{
-    std::vector<FEngineVertex> Vertexs;
-    Vertexs.resize(3);
-
-    // 삼각형 8의 각 꼭짓점에 노란색 적용
-    Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), {0.5f, 1.0f}, {1.0f, 1.0f, 0.0f, 1.0f} }; // 노란색
-    Vertexs[1] = FEngineVertex{ FVector(-0.5f, 0.0f, 0.0f), {0.0f, 0.5f}, {1.0f, 1.0f, 0.0f, 1.0f} }; // 노란색
-    Vertexs[2] = FEngineVertex{ FVector(0.0f, -1.0f, 0.0f), {0.5f, 0.5f}, {1.0f, 1.0f, 0.0f, 1.0f} }; // 노란색
-
-    UEngineVertexBuffer::Create("Triangle8", Vertexs);
-
-    std::vector<uint32_t> Indices;
-    Indices.push_back(0); // 하단 꼭짓점
-    Indices.push_back(2); // 중심선 앞쪽
-    Indices.push_back(1); // 중심선 오른쪽
-
-    UEngineIndexBuffer::Create("Triangle8", Indices);
-    UMesh::Create("Triangle8");
-}
-
-
-
 	{
-		std::vector<FEngineVertex> Vertexs;
-		Vertexs.resize(6);
+		std::vector<FEngineVertex> vertices = {
+			FEngineVertex{ FVector(-0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
 
-		Vertexs[0] = FEngineVertex{ FVector(0.0f, 0.0f, 1.0f), {0.5f, 1.0f}, {1.0f, 0.0f, 0.0f, 1.0f} };
-		Vertexs[1] = FEngineVertex{ FVector(0.0f, -0.5f, 0.0f), {0.5f, 0.5f}, {0.0f, 1.0f, 0.0f, 1.0f} };
-		Vertexs[2] = FEngineVertex{ FVector(0.5f, 0.0f, 0.0f), {1.0f, 0.5f}, {0.0f, 0.0f, 1.0f, 1.0f} };
-		Vertexs[3] = FEngineVertex{ FVector(0.0f, 0.5f, 0.0f), {0.5f, 0.5f}, {1.0f, 1.0f, 0.0f, 1.0f} };
-		Vertexs[4] = FEngineVertex{ FVector(-0.5f, 0.0f, 0.0f), {0.0f, 0.5f}, {0.0f, 1.0f, 1.0f, 1.0f} };
-		Vertexs[5] = FEngineVertex{ FVector(0.0f, 0.0f, -1.0f), {0.5f, 0.0f}, {1.0f, 0.0f, 1.0f, 1.0f} };
+			FEngineVertex{ FVector(0.0f, 0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+			FEngineVertex{ FVector(0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
 
-		// 생성
-		UEngineVertexBuffer::Create("Diamond", Vertexs);
+			FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(-0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, -0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
 
-		// 6개의 버텍스를 정의한 후 인덱스 버퍼 생성
-		std::vector<uint32_t> Indices;
+			FEngineVertex{ FVector(0.0f, 0.0f, -0.5f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, -0.75f, 0.f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
 
-		// 상단 삼각형 4개
-		Indices.push_back(0); // 상단 꼭짓점
-		Indices.push_back(1); // 중심선 앞쪽
-		Indices.push_back(2); // 중심선 오른쪽
+			FEngineVertex{ FVector(-0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), { 0.0f , 1.0f }, {1.0f, 0.0f, 1.0f, 1.f} },
 
-		Indices.push_back(0); // 상단 꼭짓점
-		Indices.push_back(2); // 중심선 오른쪽
-		Indices.push_back(3); // 중심선 뒤쪽
+			FEngineVertex{ FVector(0.0f, 0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), { 0.0f , 1.0f }, {1.0f, 0.0f, 0.0f, 1.f} },
 
-		Indices.push_back(0); // 상단 꼭짓점
-		Indices.push_back(3); // 중심선 뒤쪽
-		Indices.push_back(4); // 중심선 왼쪽
+			FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(-0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, -0.75f, 0.f), { 0.0f , 1.0f }, {0.0f, 1.0f, 0.0f, 1.f} },
 
-		Indices.push_back(0); // 상단 꼭짓점
-		Indices.push_back(4); // 중심선 왼쪽
-		Indices.push_back(1); // 중심선 앞쪽
+			FEngineVertex{ FVector(0.0f, 0.0f, 0.5f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.5f, 0.0f, 0.f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+			FEngineVertex{ FVector(0.0f, -0.75f, 0.f), { 0.0f , 1.0f }, {1.0f, 1.0f, 0.0f, 1.f} },
+		};
 
-		// 하단 삼각형 4개
-		Indices.push_back(5); // 하단 꼭짓점
-		Indices.push_back(1); // 중심선 앞쪽
-		Indices.push_back(2); // 중심선 오른쪽
+		std::vector<UINT> indices;
+		for (int i = 0; i < 24; ++i)
+		{
+			indices.push_back(i);
+		}
 
-		Indices.push_back(5); // 하단 꼭짓점
-		Indices.push_back(2); // 중심선 오른쪽
-		Indices.push_back(3); // 중심선 뒤쪽
-
-		Indices.push_back(5); // 하단 꼭짓점
-		Indices.push_back(3); // 중심선 뒤쪽
-		Indices.push_back(4); // 중심선 왼쪽
-
-		Indices.push_back(5); // 하단 꼭짓점
-		Indices.push_back(4); // 중심선 왼쪽
-		Indices.push_back(1); // 중심선 앞쪽
-
-		// 생성
-		UEngineIndexBuffer::Create("Diamond", Indices);
-
+		UEngineVertexBuffer::Create("Diamond", vertices);
+		UEngineIndexBuffer::Create("Diamond", indices);
 		UMesh::Create("Diamond");
 	}
 }

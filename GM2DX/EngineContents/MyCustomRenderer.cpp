@@ -7,9 +7,9 @@ MyCustomRenderer::MyCustomRenderer()
 	SetMesh("Rect");
 	SetMaterial("MyMaterial");
 
-	MyColor.Albedo = float4(1.0f, 1.0f, 1.0f, 1.0f);
+	/*MyColor.Albedo = float4(1.0f, 1.0f, 1.0f, 1.0f);
 
-	GetRenderUnit().ConstantBufferLinkData("FMyColor", MyColor);
+	GetRenderUnit().ConstantBufferLinkData("FMyColor", MyColor);*/
 }
 
 MyCustomRenderer::~MyCustomRenderer()

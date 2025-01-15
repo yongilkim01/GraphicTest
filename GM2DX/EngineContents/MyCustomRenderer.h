@@ -1,10 +1,6 @@
 #pragma once
 #include <EngineCore/Renderer.h>
 
-struct FMyColor
-{
-	float4 Albedo;
-};
 
 // Ό³Έν :
 class MyCustomRenderer : public URenderer
@@ -23,6 +19,6 @@ public:
 protected:
 
 private:
-	FMyColor MyColor;
+	//FMyColor MyColor;
 };
 
