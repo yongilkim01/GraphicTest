@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <FxCompile Include="EngineDebugCollisionShader.fx">
+      <Filter>2D</Filter>
+    </FxCompile>
+    <FxCompile Include="EngineSpriteShader.fx">
+      <Filter>2D</Filter>
+    </FxCompile>
+    <FxCompile Include="EngineTileMapShader.fx">
+      <Filter>2D</Filter>
+    </FxCompile>
+    <FxCompile Include="EngineTargetMergeShader.fx">
+      <Filter>Target</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="2D">
+      <UniqueIdentifier>{fd07ac75-8fbb-40ce-9ac2-3921460a82d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Target">
+      <UniqueIdentifier>{1e746562-dc2d-48ae-9677-71a55a99bef2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
